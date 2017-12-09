@@ -1,6 +1,6 @@
-const Discord = require("discord.js");
-
+const Discord = require("discord.js")
 var bot = new Discord.Client();
+const Google = require('./Google')
 
 bot.on("ready", function() {
     bot.user.setGame("Swam, !help");
@@ -9,6 +9,9 @@ bot.on("ready", function() {
 })
 
 bot.on('message', function (message) {
+    if (Google.match(message)) {
+        return Google.action(message)
+    }
     if (message.content === '!ping') {
         message.channel.send('pong')
     }

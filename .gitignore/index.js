@@ -1,6 +1,6 @@
 const Discord = require("discord.js")
 var bot = new Discord.Client();
-const Google = require('./Google')
+const Google = require('./Google.js')
 
 bot.on("ready", function() {
     bot.user.setGame("Swam, !help");

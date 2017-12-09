@@ -1,5 +1,7 @@
 const Discord = require("discord.js")
 var bot = new Discord.Client();
+const Play = require('./commands/play')
+const Google = require('./commands/google')
 
 bot.on("ready", function() {
     bot.user.setGame("Swam, !help");
@@ -8,10 +10,8 @@ bot.on("ready", function() {
 })
 
 bot.on('message', function (message) {
-    if (message.content === '!ping') {
-        message.channel.send('pong')
-    }
-})
+    Google.parse(message)
+})  
 
 bot.o,('guildMemberAdd', function (member) {
     member.createDM().then(function (channel) {

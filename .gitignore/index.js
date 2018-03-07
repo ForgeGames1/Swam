@@ -19,4 +19,4 @@ bot.o,('guildMemberAdd', function (member) {
     }).catch(console.error)
 })
 
-bot.login("Mjg5MDUwNzE1ODk1MjM0NTcw.DQzDJA.FZfPWOZ9uzXNPhMDG8Ebjp2RzG4");
+bot.login("NDE4MTQ1NzYzNjg0NTE1ODQw.DYGsjg.ISdAaBaf6wlZiilpm23hyCiK-e8");
